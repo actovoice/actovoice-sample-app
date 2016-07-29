@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.giveFeedback:
-                ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_FEEDBACK_LIST);
+                ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_FEEDBACK);
                 break;
             case R.id.needAssistance:
-                ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_TICKET_LIST);
+                ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_TICKET);
                 break;
         }
     }
