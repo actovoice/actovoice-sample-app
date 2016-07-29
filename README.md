@@ -43,7 +43,7 @@ repositories {
 
 dependencies {
    compile fileTree(dir: 'libs', include: ['*.jar'])
-   compile 'com.actovoice.android:sdk:0.0.6'
+   compile 'com.actovoice.android:sdk:0.0.1'
    ...
    ...
 }
@@ -58,7 +58,10 @@ public class ApplicationClass extends  Application {
    @Override
    public void onCreate() {
        super.onCreate();
-       ActoVoice.init(this, "your_sdk_app_key", “your_app_user_id"); // This method will authenticate your app
+       
+       //This method will authenticate your app & also you need to call this API whenever the app user changes.
+       ActoVoice.init(this, "your_sdk_app_key", “your_app_user_id");
+       
    }
 
 }
@@ -67,7 +70,29 @@ public class ApplicationClass extends  Application {
 - **your_sdk_app_key** - App key that was registered via actovoice.com business account
 - **your_app_user_id** - This can be your own user id which can be anything. Some examples are emaild id, mobile number of app user. This id is opaque to ActoVoice. This id is shown in ActoVoice portal as consumer id.
 
-**Note: You can either add this in your application class or wherever you set the user in your app**
+**Note**: You can either add this in your application class or wherever you set the user data/object in your app
 
 
 
+###Your app interaction with SDK
+
+- In order to allow your app user to give feedback or ask for assitance you need the following things to do:-
+	- Create two UI buttons one for feedback and other for ticket 
+	- Add on click listeners on both the buttons
+	- inside onClick() method add below lines of code repectively to invoke the feedback and ticket list screens
+
+    ```
+    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.SHOW_FEEDBACK_LIST);  
+    ```
+
+    ```
+    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.SHOW_TICKET_LIST);
+    ```
+    
+**Note** - You can always have the UI as you want in your app, but make sure you create two entry points for the feedback and ticket functionality) instead of creating two buttons.
+
+###Build
+
+Build your project and see everything work!
+
+To build and run ![]({{site.baseurl}}//run.png)
