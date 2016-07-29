@@ -16,7 +16,7 @@ By integrating actovoice sdk into your app, it gives the power to your app user 
 
 1) First you need to register your business on [ActoVoice](http://live.actovoice.com/#/register)
 
-2) Once registration is done and you are logged in, navigate to admin section and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines"
+2) Once registration is done and you are logged in, navigate to admin section (gear icon) and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines"
 
    ![screen1.png]({{site.baseurl}}/screen1.png)
 
@@ -29,24 +29,45 @@ By integrating actovoice sdk into your app, it gives the power to your app user 
 Add in your android app module build.gradle 
 
 ```sh
-apply plugin: com.android.application
-….
-….
+apply plugin: 'com.android.application'
+...
+...
 repositories {
      maven {
        url  "http://dl.bintray.com/actovoice/maven"  
    }
 }
 
-….
-....
+...
+...
 
 dependencies {
-   ….
-   ….
+   compile fileTree(dir: 'libs', include: ['*.jar'])
    compile 'com.actovoice.android:sdk:0.0.6'
-  ….
-  ….
+   ...
+   ...
 }
 
 ```
+
+###Add Your SDK APP Key
+
+```
+public class ApplicationClass extends  Application {
+
+   @Override
+   public void onCreate() {
+       super.onCreate();
+       ActoVoice.init(this, "your_sdk_app_key", “your_app_user_id"); // This method will authenticate your app
+   }
+
+}
+```
+
+- **your_sdk_app_key** - App key that was registered via actovoice.com business account
+- **your_app_user_id** - This can be your own user id which can be anything. Some examples are emaild id, mobile number of app user. This id is opaque to ActoVoice. This id is shown in ActoVoice portal as consumer id.
+
+**Note: You can either add this in your application class or wherever you set the user in your app**
+
+
+
