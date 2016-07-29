@@ -104,6 +104,7 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 ##Demo App with Actovoice SDK integration
 
 [actovoice-sample-app](https://github.com/actovoice/actovoice-sample-app)
+Please read through the README.md file for the instructions on integrating with SDK
 
 ##Contact us
 
