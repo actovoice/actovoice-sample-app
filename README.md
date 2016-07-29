@@ -110,11 +110,7 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 
 ##LICENSE
 
-APACHE2.0
-
-##Demo App with Actovoice SDK integration
-
-- [actovoice-sample-app](https://github.com/actovoice/actovoice-sample-app)
+APACHE 2.0
 
 ##Contact us
 
