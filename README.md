@@ -109,7 +109,7 @@ APACHE2.0
 
 ##Demo App with Actovoice SDK integration
 
-[actovoice-sample-app](https://github.com/actovoice/actovoice-sample-app)
+- [actovoice-sample-app](https://github.com/actovoice/actovoice-sample-app)
 
 ##Contact us
 
