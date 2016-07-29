@@ -102,6 +102,11 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 - However, user can submit feedback or create ticket (ask for assistance) from '+' plus FAB button from respective screens.
 - Please refer screenshots here - 
 
+![Buttons](https://github.com/actovoice/actovoice-sample-app/blob/master/1.png)
+![Need Assistance List Screen](https://github.com/actovoice/actovoice-sample-app/blob/master/2.png)
+![Create Assistance or Ticket](https://github.com/actovoice/actovoice-sample-app/blob/master/3.png)
+![Create Feedback](https://github.com/actovoice/actovoice-sample-app/blob/master/4.png)
+
 
 ##LICENSE
 
