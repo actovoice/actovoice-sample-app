@@ -1,7 +1,7 @@
 # actovoice-sample-app
 A sample android app using ActoVoice android SDK
 
-#Introduction about ActoVoice android sdk
+##Introduction about ActoVoice android sdk
 
 Are you a large business trying to find that small business personal touch or are you a small business looking for feedback on a new product? Does your business have a need to improve your customer satisfaction scores? Are you concerned about social media impacting your brand? Switch the paradigm. Enable your customers to connect with you when THEY want. The SDK allowing businesses to stay continuously connected with their customers is finally here! Businesses and organizations of any size can establish a Continuous Feedback Loop allowing customers and employees to share their experiences when they are in-the-moment.
 
@@ -18,7 +18,7 @@ By integrating actovoice sdk into your app, it gives the power to your app user 
 
 2) Once registration is done and you are logged in, navigate to admin section (gear icon) and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines"
 
-   ![ActoVoice Admin screen]({{site.baseurl}}//screen1.png)
+  ![ActoVoice Admin Screen](https://github.com/actovoice/actovoice-sample-app/blob/master/app/src/main/res/drawable/screen1.png)
 
 3) Now, you need to generate the SDK APP Key. Refer above screen shot and click on "SDK Configuration". Fill the details and click to generate the key. You will need this key while integrating the SDK with your APP.
 
@@ -49,7 +49,7 @@ dependencies {
 
 ```
 
-###Add Your SDK APP Key
+##Add Your SDK APP Key
 
 ```
 public class ApplicationClass extends  Application {
@@ -73,26 +73,48 @@ public class ApplicationClass extends  Application {
 
 
 
-###Your app interaction with SDK
+##Your app interaction with SDK
 
 - In order to allow your app user to give feedback or ask for assitance you need the following things to do:-
 	- Create two UI buttons one for feedback and other for ticket 
 	- Add on click listeners on both the buttons
-	- inside onClick() method add below lines of code repectively to invoke the feedback and ticket list screens
+	- inside onClick() method add below lines of code repectively to invoke the create feedback and ticket screens
 
     ```
-    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.SHOW_FEEDBACK_LIST);  
+    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_FEEDBACK);  
     ```
 
     ```
-    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.SHOW_TICKET_LIST);
+    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_TICKET);
     ```
     
 **Note** - You can always have the UI as you want in your app, but make sure you create two entry points for the feedback and ticket functionality) instead of creating two buttons.
 
-###Build
+##Build
 
 Build your project and see everything work!
 
-To build and run ![]({{site.baseurl}}//run.png)
+To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoice-sample-app/blob/master/app/src/main/res/drawable/run.png)
+
+##After installing your app on device
+
+- You will see empty feedback and ticket list
+- However, user can submit feedback or create ticket (ask for assistance) from '+' plus FAB button from respective screens.
+- Please refer screenshots here - 
+
+
+##LICENSE
+
+APACHE2.0
+
+##Demo App with Actovoice SDK integration
+
+- [actovoice-sample-app](https://github.com/actovoice/actovoice-sample-app)
+
+##Contact us
+
+- developer@actovoice.com
+
+
+
 
