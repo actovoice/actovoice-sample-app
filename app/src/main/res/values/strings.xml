@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ActoVoiceSampleApp</string>
+    <string name="give_feedback">Give Feedback</string>
+    <string name="need_assistance">Need Assistance</string>
+</resources>
