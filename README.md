@@ -42,10 +42,9 @@ repositories {
 ...
 
 dependencies {
-   compile fileTree(dir: 'libs', include: ['*.jar'])
-   compile 'com.actovoice.android:sdk:0.0.1'
-   ...
-   ...
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.actovoice.android:sdk:0.0.1'
 }
 
 ```
@@ -96,3 +95,4 @@ public class ApplicationClass extends  Application {
 Build your project and see everything work!
 
 To build and run ![]({{site.baseurl}}//run.png)
+
