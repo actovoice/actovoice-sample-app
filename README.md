@@ -18,7 +18,7 @@ By integrating actovoice sdk into your app, it gives the power to your app user 
 
 2) Once registration is done and you are logged in, navigate to admin section (gear icon) and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines"
 
-   ![screen1.png]({{site.baseurl}}/screen1.png)
+   ![ActoVoice Admin screen]({{site.baseurl}}//screen1.png)
 
 3) Now, you need to generate the SDK APP Key. Refer above screen shot and click on "SDK Configuration". Fill the details and click to generate the key. You will need this key while integrating the SDK with your APP.
 
