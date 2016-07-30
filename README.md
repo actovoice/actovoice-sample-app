@@ -112,10 +112,12 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 
 The following attributes may be used to theme SDK (see sample app values/colors.xml)
 
-- android:textColorPrimary	: Title color
-- android:textColorSecondary	: Description text and Term of Services text color
-- android:windowBackground	: Background color
-- colorAccent :	Image color, button color, and widget color
+Attribute | Effect
+----------|------------
+android:textColorPrimary | Title color
+android:textColorSecondary | Description text and Term of Services text color
+android:windowBackground | Background color
+colorAccent | Image color, button color, and widget color
 
 ##LICENSE
 
