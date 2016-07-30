@@ -118,7 +118,7 @@ The following attributes may be used to theme SDK (see sample app values/colors.
 
 ##LICENSE
 
-APACHE 2.0
+- APACHE 2.0
 
 ##Contact us
 
