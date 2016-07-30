@@ -100,6 +100,7 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 
 - You will see empty feedback and ticket list
 - However, user can submit feedback or create ticket (ask for assistance) from '+' plus FAB button from respective screens.
+- Once feedback or tickets are created it will get associated/attached against the object that you created from Actovoice portal and this data will populate on your respective UI list screens later.
 - Please refer screenshots here - 
 
 ![Buttons](https://github.com/actovoice/actovoice-sample-app/blob/master/1.png)
