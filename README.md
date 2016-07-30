@@ -107,6 +107,14 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 ![Create Assistance or Ticket](https://github.com/actovoice/actovoice-sample-app/blob/master/3.png)
 ![Create Feedback](https://github.com/actovoice/actovoice-sample-app/blob/master/4.png)
 
+##Customize the Theme
+
+The following attributes may be used to theme SDK (see sample app values/colors.xml)
+
+- android:textColorPrimary	: Title color
+- android:textColorSecondary	: Description text and Term of Services text color
+- android:windowBackground	: Background color
+- colorAccent :	Image color, button color, and widget color
 
 ##LICENSE
 
