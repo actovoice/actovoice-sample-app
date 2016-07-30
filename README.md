@@ -16,7 +16,7 @@ By integrating actovoice sdk into your app, it gives the power to your app user 
 
 1) First you need to register your business on [ActoVoice](http://live.actovoice.com/#/register)
 
-2) Once registration is done and you are logged in, navigate to admin section (gear icon) and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines"
+2) Once registration is done and you are logged in, navigate to admin section (gear icon) and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines". Hence once start giving feedback or ask for assitance will be then attached to this object. 
 
   ![ActoVoice Admin Screen](https://github.com/actovoice/actovoice-sample-app/blob/master/app/src/main/res/drawable/screen1.png)
 
