@@ -49,6 +49,8 @@ dependencies {
 
 ```
 
+**Note:** - Actovoice SDK has min android sdk version as 18
+
 ##Add Your SDK APP Key
 
 ```
