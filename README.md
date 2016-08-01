@@ -90,6 +90,13 @@ public class ApplicationClass extends  Application {
     
 **Note** - You can always have the UI as you want in your app, but make sure you create two entry points for the feedback and ticket functionality) instead of creating two buttons.
 
+##Permissions in your app manifest
+
+Make sure that you have added below permission in your app
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
 ##Build
 
 Build your project and see everything work!
