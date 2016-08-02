@@ -16,7 +16,7 @@ By integrating actovoice sdk into your app, it gives the power to your app user 
 
 1) First you need to register your business on [ActoVoice](http://live.actovoice.com/#/register)
 
-2) Once registration is done and you are logged in, navigate to admin section (gear icon) and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines"
+2) Once registration is done and you are logged in, navigate to admin section (gear icon) and click on red "+Add object" at right    most and fill the necessary details. For example you added an object say "Lufthansa Airlines". Hence once start giving feedback or ask for assitance will be then attached to this object. 
 
   ![ActoVoice Admin Screen](https://github.com/actovoice/actovoice-sample-app/blob/master/app/src/main/res/drawable/screen1.png)
 
@@ -44,10 +44,12 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.actovoice.android:sdk:0.0.1'
+    compile 'com.actovoice.android:sdk:0.0.3'
 }
 
 ```
+
+**Note:** - Actovoice SDK has min android sdk version as 18, please make sure that your app has min android sdk version as 18
 
 ##Add Your SDK APP Key
 
@@ -81,14 +83,31 @@ public class ApplicationClass extends  Application {
 	- inside onClick() method add below lines of code repectively to invoke the create feedback and ticket screens
 
     ```
-    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_FEEDBACK);  
+    @Override
+    public void onClick(View view) {
+      	ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_FEEDBACK);  
+    }
     ```
 
     ```
-    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_TICKET);
+     @Override
+    public void onClick(View view) {
+      	ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_TICKET);
+    }
+   
     ```
+ 
+ - Once you build the app, and click on either button, you will see a list screen with FAB (plus button). On Clicking of that FAB plus button it will allow your users to give feedback or create tickets from respective list screens. Please scroll down to see the sample app screenshots.
+ 
     
 **Note** - You can always have the UI as you want in your app, but make sure you create two entry points for the feedback and ticket functionality) instead of creating two buttons.
+
+##Permissions in your app manifest
+
+Make sure that you have added below permission in your app
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
 ##Build
 
@@ -98,23 +117,32 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 
 ##After installing your app on device
 
-- You will see empty feedback and ticket list
+- If you run into any crash's or error's, please look into debug logs of your app (you may have missed something from this document)
+- If all is well then, You will see empty feedback and ticket list
 - However, user can submit feedback or create ticket (ask for assistance) from '+' plus FAB button from respective screens.
+- Once feedback or tickets are created it will get associated/attached against the object that you created from Actovoice portal and this data will populate on your respective UI list screens later.
 - Please refer screenshots here - 
 
+![Buttons](https://github.com/actovoice/actovoice-sample-app/blob/master/1.png)
+![Need Assistance List Screen](https://github.com/actovoice/actovoice-sample-app/blob/master/2.png)
+![Create Assistance or Ticket](https://github.com/actovoice/actovoice-sample-app/blob/master/3.png)
+![Create Feedback](https://github.com/actovoice/actovoice-sample-app/blob/master/4.png)
+
+##Customize the Theme
+
+The following attributes may be used to theme SDK (see sample app values/colors.xml)
+
+Attribute | Effect
+----------|------------
+android:textColorPrimary | Title color
+android:textColorSecondary | Description text and Term of Services text color
+android:windowBackground | Background color
+colorAccent | Image color, button color, and widget color
 
 ##LICENSE
 
-APACHE2.0
-
-##Demo App with Actovoice SDK integration
-
-- [actovoice-sample-app](https://github.com/actovoice/actovoice-sample-app)
+- APACHE 2.0
 
 ##Contact us
 
 - developer@actovoice.com
-
-
-
-
