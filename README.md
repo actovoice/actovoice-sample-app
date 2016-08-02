@@ -49,7 +49,7 @@ dependencies {
 
 ```
 
-**Note:** - Actovoice SDK has min android sdk version as 18
+**Note:** - Actovoice SDK has min android sdk version as 18, please make sure that your app has min android sdk version as 18
 
 ##Add Your SDK APP Key
 
@@ -83,12 +83,22 @@ public class ApplicationClass extends  Application {
 	- inside onClick() method add below lines of code repectively to invoke the create feedback and ticket screens
 
     ```
-    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_FEEDBACK);  
+    @Override
+    public void onClick(View view) {
+      	ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_FEEDBACK);  
+    }
     ```
 
     ```
-    ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_TICKET);
+     @Override
+    public void onClick(View view) {
+      	ActoVoice.getInstance().setProductData(view, ActoVoice.Action.CREATE_TICKET);
+    }
+   
     ```
+ 
+ - Once you build the app, and click on either button, you will see a list screen with FAB (plus button). On Clicking of that FAB plus button it will allow your users to give feedback or create tickets from respective list screens. Please scroll down to see the sample app screenshots.
+ 
     
 **Note** - You can always have the UI as you want in your app, but make sure you create two entry points for the feedback and ticket functionality) instead of creating two buttons.
 
@@ -135,7 +145,3 @@ colorAccent | Image color, button color, and widget color
 ##Contact us
 
 - developer@actovoice.com
-
-
-
-
