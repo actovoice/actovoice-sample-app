@@ -117,7 +117,8 @@ To build and run ![ActoVoice Admin Screen](https://github.com/actovoice/actovoic
 
 ##After installing your app on device
 
-- You will see empty feedback and ticket list
+- If you run into any crash's or error's, please look into debug logs of your app (you may have missed something from this document)
+- If all is well then, You will see empty feedback and ticket list
 - However, user can submit feedback or create ticket (ask for assistance) from '+' plus FAB button from respective screens.
 - Once feedback or tickets are created it will get associated/attached against the object that you created from Actovoice portal and this data will populate on your respective UI list screens later.
 - Please refer screenshots here - 
