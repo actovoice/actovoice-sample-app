@@ -45,7 +45,7 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.actovoice.android:sdk:0.0.6'
+    compile 'com.actovoice.android:sdk:0.1.1'
 }
 
 ```
